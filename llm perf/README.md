@@ -5,10 +5,13 @@
 5. [ZeRO: Memory Optimizations Toward Training Trillion Parameter Models](https://arxiv.org/abs/1910.02054)
 6. [Efficient Large-Scale Language Model Training on GPU Clusters Using Megatron-LM](https://arxiv.org/abs/2104.04473)
 7. [Scaling Distributed Machine Learning with the Parameter Server](https://www.usenix.org/system/files/conference/osdi14/osdi14-paper-li_mu.pdf)
+8. [OpenAI techniques for training large neural networks](https://openai.com/research/techniques-for-training-large-neural-networks)
+9. [Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer](https://arxiv.org/abs/1701.06538)
+10. [Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity](https://arxiv.org/abs/2101.03961)
+11. [GShard: Scaling Giant Models with Conditional Computation and Automatic Sharding](https://arxiv.org/abs/2006.16668)
+
 
 - https://github.com/mli/paper-reading
-
-
 
 
 
@@ -141,6 +144,90 @@ Perf Analysis
 - Network optimization: compression, caching, filter
 - Versioning: vector clock to support versioning with range query
 
+<!-----
 
+Yay, no errors, warnings, or alerts!
+
+Conversion time: 1.406 seconds.
+
+
+Using this Markdown file:
+
+1. Paste this output into your source file.
+2. See the notes and action items below regarding this conversion run.
+3. Check the rendered output (headings, lists, code blocks, tables) for proper
+   formatting and use a linkchecker before you publish this page.
+
+Conversion notes:
+
+* Docs to Markdown version 1.0β34
+* Fri Sep 29 2023 18:53:07 GMT-0700 (PDT)
+* Source doc: LoRA Throughput Tuning
+* This is a partial selection. Check to make sure intra-doc links work.
+----->
+
+
+
+# MoE 
+
+OpenAI techniques for training large neural networks
+
+
+
+* [https://openai.com/research/techniques-for-training-large-neural-networks](https://openai.com/research/techniques-for-training-large-neural-networks) 
+
+
+## Sparsely-Gated MoE 
+
+
+
+* [https://arxiv.org/abs/1701.06538](https://arxiv.org/abs/1701.06538) 
+* MoE has been created 20 years ago: y = sum(G(x) * E(x))
+* Gating network: 
+    * 1) sparsity: only top-k experts will be computed, 
+    * 2) a noise on the input x for Gating computation
+* Addressing Issues
+    * Shrinking batch problem: data parallel standard layers but model parallel experts (only one replica)
+    * Network bandwidth: increase n_layer and hidden dimension in experts
+    * Balancing Expert utilization: introduce additional loss function to encourage equal importance
+* Q: How is routing logic actually implemented? 
+
+
+## Switch Transformers
+
+
+
+* [https://arxiv.org/abs/2101.03961](https://arxiv.org/abs/2101.03961) 
+* Limitation of Sparsely-Gated MoE: computation efficiency, complexity, instability
+* Switch Transformer
+    * Parameter count, independent of total computation performed, is a separately important axis on which to scale
+    * Simplify expert routing: instead of top-k, make k=1 in routing
+    * Efficient sparse routing: 
+        * Set expert capacity, and skip computation for tokens that exceeds expert capacity
+        * Single auxiliary loss function to balance expert load and importance
+* Solve instability: 1) selective precision, 2) parameter initialization, 3) regularization
+* Advanced results: 
+    * 1) advanced performance on time and step basis analysis, 
+    * 2) advanced performance on fine tune, distillation, etc
+* Perf analysis (compute & comm) over data, model, and expert parallel 
+
+
+## GShard 
+
+
+
+* [https://arxiv.org/abs/2006.16668](https://arxiv.org/abs/2006.16668) 
+* A easy to use library that partitions gated MoE model with high efficiency
+* Design principles: 
+    * 1) use gated MoE to achieve sub-linear scaling between computation/communication requirements and model capacity
+    * 2) separate model arch code with infra (partitioning and perf optimization) code
+    * 3) still use SPMD to retain compiler scalability
+* Model: 1) top-k is independent of num of experts, 2) shard MoE across devices but replicate other layers
+* Parallelization: 
+    * partition input tokens into groups, each of which runs gating and routing in parallel
+    * einsum to denote the algorithm
+    * use annotation to denote sharding (dimension, shard) and replication info
+* XLA compiler partitioner implementation details: communication primitives, operators
+* Experiment on Gated MoE, with perf (memory, compute, communication) analysis and best practice
 
 
