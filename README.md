@@ -1,5 +1,6 @@
 
 ## Scaling Law for Neural Network Models
+10/23
 
 * [https://arxiv.org/abs/2001.08361](https://arxiv.org/abs/2001.08361)
 * The loss scales as a power-law with model size, dataset size, and the amount of compute used for training
@@ -8,7 +9,7 @@
 * Insightful analysis on equations related to overfitting and efficient batch size
 
 # MoE 
-* 10/23
+10/23
 
 OpenAI techniques for training large neural networks
 
@@ -70,7 +71,7 @@ OpenAI techniques for training large neural networks
 
 # LoRA 
 
-- 09/23
+09/23
 
 ## LORA: LOW-RANK ADAPTATION OF LARGE LANGUAGE MODELS
 Terms
