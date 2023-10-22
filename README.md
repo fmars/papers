@@ -1,3 +1,11 @@
+## DALL.E 3 Improving Image Generation with Better Captions
+10/21
+
+* https://cdn.openai.com/papers/dall-e-3.pdf
+* Challenge of image generation: controllability of image generation systems, which often overlook the words, word ordering, or meaning in a given caption
+* Hypothesize: a fundamental issue is the poor quality of text and image pairing datset
+* Solution: generate improved captions for images by caption model in the dataset, and train text-to-image models with this synthetic data
+* Result: comparing text-to-image models trained with ground truth captions, short synthetic captions and descriptive synthetic captions, observed significant performance improvements 
 
 ## Scaling Law for Neural Network Models
 10/16
