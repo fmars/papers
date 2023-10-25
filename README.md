@@ -1,3 +1,20 @@
+## On the Opportunities and Risks of Foundation Models
+10/25
+
+* https://arxiv.org/abs/2108.07258
+* Research insights of foundation model, and landscape summary
+* The significance of foundation model can be summarized by two words: emergence and homogenization
+* The emergence is the both the source of scientific excitement and anxiety about unanticipated consequence
+* Stages in foundation model ecosystem: data creation, data curation, training, adaption, deployment
+   * Training data determines the theoretical information available for foundation model
+   * Model architectures determine how much of this information can be extracted
+   * Computer systems determin what is practically achievable
+* In major ML research areas, e.g. NLP, vision, etc, the transition marked a new era, where the classic approaches were task-specific feature engineering, towards self-supervised learning that could make use of large quantities of raw data with great generality
+* Paradox in AI: hard problems are easy and easy problems are hard
+* In transformer, attention layers provide a new ability, in contrast to feed-forward MLP, is to adapt its computation to the input, e.g. She ate the icecream with the X [spoon|strawberries].
+* TODO: retrieval-based models such as REALM, RAG, ColBERT-QA, and RETRO
+
+  
 ## DALL.E 3 Improving Image Generation with Better Captions
 10/21
 
