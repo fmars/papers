@@ -1,5 +1,11 @@
+## Generative Adversarial Nets
+23/11
+* Co-train a generative model and discriminative model
+* The idea isn't something never exists before. But this doesn't prevent it becoming a great work. Figuring out the right solution to solve right problem is remarkable
+* The concept is intuitive to understand but still need see concrete examples to understand details
+  
 ## On the Opportunities and Risks of Foundation Models
-10/25
+23/10
 
 * https://arxiv.org/abs/2108.07258
 * Research insights of foundation model, and landscape summary
@@ -16,7 +22,7 @@
 
   
 ## DALL.E 3 Improving Image Generation with Better Captions
-10/21
+23/10
 
 * https://cdn.openai.com/papers/dall-e-3.pdf
 * Challenge of image generation: controllability of image generation systems, which often overlook the words, word ordering, or meaning in a given caption
@@ -25,7 +31,7 @@
 * Result: comparing text-to-image models trained with ground truth captions, short synthetic captions and descriptive synthetic captions, observed significant performance improvements 
 
 ## Scaling Law for Neural Network Models
-10/16
+23/10
 
 * [https://arxiv.org/abs/2001.08361](https://arxiv.org/abs/2001.08361)
 * The loss scales as a power-law with model size, dataset size, and the amount of compute used for training
@@ -34,7 +40,7 @@
 * Insightful analysis on equations related to overfitting and efficient batch size
 
 # MoE 
-10/09
+23/10
 
 OpenAI techniques for training large neural networks
 
@@ -42,7 +48,7 @@ OpenAI techniques for training large neural networks
 
 
 ## Sparsely-Gated MoE 
-
+23/10
 
 
 * [https://arxiv.org/abs/1701.06538](https://arxiv.org/abs/1701.06538) 
@@ -58,7 +64,7 @@ OpenAI techniques for training large neural networks
 
 
 ## Switch Transformers
-
+23/10
 
 
 * [https://arxiv.org/abs/2101.03961](https://arxiv.org/abs/2101.03961) 
@@ -77,7 +83,7 @@ OpenAI techniques for training large neural networks
 
 
 ## GShard 
-
+23/09
 
 
 * [https://arxiv.org/abs/2006.16668](https://arxiv.org/abs/2006.16668) 
@@ -96,7 +102,7 @@ OpenAI techniques for training large neural networks
 
 # LoRA 
 
-09/23
+23/09
 
 ## LORA: LOW-RANK ADAPTATION OF LARGE LANGUAGE MODELS
 Terms
