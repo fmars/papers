@@ -1,3 +1,12 @@
+## Flexpoint: An Adaptive Numerical Format for Efficient Training of Deep Neural Networks
+23/11
+* Floating point format: https://github.com/fmars/pbag/blob/master/pytorch/floating_point.py
+  * Sign, exponent, precision. Normalized and denormal values
+* Assumptions: 1) in a DNN, activitaions, gradients, parameters have very different ranges, 2) ranges of values in DNN changes sufficiently slowly, 3) low bit-width quantization solutions work well for inference but not training
+* FlexN+M uses M-bit exponent shared across all elements of a tensor, and has a N-bit precision storing an integer value for each element
+* Reduce memory, bandwidth, and computation (turns computation of DNN into fixed point operations)
+* Autoflex algorithm stores a histgram of value range to predict future range
+  
 ## Generative Adversarial Nets
 23/11
 * Co-train a generative model and discriminative model
