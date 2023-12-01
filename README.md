@@ -1,3 +1,12 @@
+## A Survey on Deep Learning Hardware Accelerators for Heterogeneous HPC Platforms
+23/11
+* HPC seems to focus a lot on hardware and also ML/hardware co-design
+* General types of DNN: MLP, CNN (capture high-level representation), RNN (capture time-series info), Tranformer (recognize long-distance dependencies between data)
+* P100, V100, A100, H100 specs. On A100, reported HBM mem bandwidth is 1.5TB/s. Observed 2.5TB/s (https://github.com/fmars/pbag/blob/master/pytorch/mem_bandwidth.py)
+* DGX - Digital Graphic Workstation. Nvidia GPU servers with high bandwidth connections
+* Sparsity: common sparse matrix storage formats include COO, CSR, CSC
+* HBM is 3D stacked memory providing better storage, bandwidth and efficiency
+* 
 ## Flexpoint: An Adaptive Numerical Format for Efficient Training of Deep Neural Networks
 23/11
 * Floating point format: https://github.com/fmars/pbag/blob/master/pytorch/floating_point.py
