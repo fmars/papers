@@ -1,3 +1,10 @@
+## ImageNet Classification with Deep Convolutional Neural Networks
+23/12
+* Overall: 5 CNN/3 FC + ReLU + 2GPU + local normalization + overlapping pooling + data augmentation + dropout
+* ReLU: in terms of training time, saturating nonlinearities (e.g. tanh) are much slower than non-saturating nonlinearity (e.g. ReLU)
+* Reduce overfitting: 1) artificically enlarge dataset using label-preserving transformation, a) extracting patches, b) PCA, 2) dropout
+* Discussion: all of our experiments suggest that our results can be improved simply by waiting for faster GPUs and bigger datasets to become available.
+
 ## A Survey on Deep Learning Hardware Accelerators for Heterogeneous HPC Platforms
 23/11
 * HPC seems to focus a lot on hardware and also ML/hardware co-design
