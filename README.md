@@ -1,3 +1,14 @@
+## NVidia A100 Tensor Core GPU Architecture
+23/12
+* 3rd gen Tensor Core with Sparsity, TF32 boost perf, BF16/FP32 mixed precision boost perf
+  * BF16 Tensor Core is now at the same throughput as FP16 (FP16 has more precision. Why BF16 slower??)
+* Multi-Instance GPU (MIG) for virtualization
+* 40GB HBM (1555GB/s) , 40MB L2 cache on-chip shared by SMs, and 192KB L1 cache for combined shared memory and L1 cache (L1 cache is essentially register file?)
+* 12 NVLink for 600GB/s in total
+* Sparsity: fine grained structured sparsity by 2:4 sparse pattern provides 2x throughput boost with little to zero accuracy loss at inference time
+ * Fine-grained sparsity: zeroing outr specific weights distributed across the neural network
+ * Coarse-grained sparsity: zeroing out entire sub-network
+ 
 ## ImageNet Classification with Deep Convolutional Neural Networks
 23/12
 * Overall: 5 CNN/3 FC + ReLU + 2GPU + local normalization + overlapping pooling + data augmentation + dropout
