@@ -1,3 +1,10 @@
+## Deep Learning with Limited Numerical Precision (Stochastic Rounding)
+23/12
+* Similar to FlexPoint, another approach uses low-precision tensor to train model with little accuracy loss
+* Propose to use 16-bits fixed point number representation as <IL, FL>.
+* Benefit of fixed point number is faster and less memory footprint.
+* Stochastic rounding: the probability of up/down rounding is proportion to how is a number closer to ceiling and flooring number
+
 ## NVidia A100 Tensor Core GPU Architecture
 23/12
 * 3rd gen Tensor Core with Sparsity, TF32 boost perf, BF16/FP32 mixed precision boost perf
