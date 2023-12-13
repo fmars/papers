@@ -1,3 +1,13 @@
+## Distributed Representations of Words and Phrases and their Compositionality
+23/12
+* NeurIPS 2023 Test of Time Award
+* Optimizations for Skip-gram model to improve both efficiency and accuracy
+* Hierarchical softmax: reduce softmax computation complexity from O(n_vocab) to O(log(n_vocab))
+* Negative sampling: introduce a noise distribution to pick negative samples to compute loss together with w_in and w_out
+* Subsampling of frequent words: each word is discarded with probability proportional to its frequency in dataset
+* Empirical results shown negative sampling outperforms others
+* Seems to provide some explanation of why word embedding has addictive compositionality (e.g. Russion + river = Volga). Don't really follow though..
+  
 ## Deep Learning with Limited Numerical Precision (Stochastic Rounding)
 23/12
 * Similar to FlexPoint, another approach uses low-precision tensor to train model with little accuracy loss
