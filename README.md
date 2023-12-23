@@ -1,3 +1,11 @@
+## MPI: Message-Passing Inference Standard
+23/12
+* Easy to use, portable
+* https://github.com/fmars/pbag/commit/a559bbebd328e06c98399d635760755b245465fe
+* Blocking vs non-blocking, generic object vs buffer-like object
+* P2p communication, broadcast
+* gather(), scatter(), all_gather(), scatter_gather()/all2all()
+* reduce(), all_reduce(), reduce_scatter()
 ## Distributed Representations of Words and Phrases and their Compositionality
 23/12
 * NeurIPS 2023 Test of Time Award
