@@ -1,3 +1,11 @@
+## Triton
+23/12
+* Challenges in CUDA programming 1) data transfer coalescing to efficienctly use memory bandwidth, 2) data management for efficient data reuse, 3) computation partitioning and scheduling for efficient parallel execution
+* Hand written kernel requires significant expertise to be efficient, while facing the risk of low portability
+* Multi-dimensional tiles are the center of data-flow analysis in Trition. Programmer works on program level granularity rather than treahd. Each kernel is single threaded, though automatically parallelized. This hides the details of concurrency primitives to compiler, e.g. shared memory synchronization, inter-thread communication, etc.
+* Github tutorials are great learning materials. Still need more practice to fully understand Triton
+
+
 ## MPI: Message-Passing Inference Standard
 23/12
 * Easy to use, portable
