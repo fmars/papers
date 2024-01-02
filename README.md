@@ -8,6 +8,7 @@
 * Deep Retrieval: 1) a efficient while accurate retrieval model, 2) D layers each with K nodes, 3) each item is associated with J paths, 4) first layer takes user emb as input, runs MLP and softmax, outputs layer emb, concatenates with original user emb and passes to next layer, 5) final similiarity score is the product of all probabilities of all layers
 * SGD for model paramter learning (continuous objective). EM (Expectation Maximization) for item-to-path mapping learning (discrete objective)
   * Stochastic in SGD due to randomly select mini-batch out of global training dataset!
+  * Latent cluster: each node in a layer is a latent cluster!
 * Finally got some sense of how is probability distribution (in statistics) related to machine learning!
 
 ## Triton
