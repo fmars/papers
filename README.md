@@ -1,3 +1,9 @@
+## InstructGPT: Training language models to follow instructions with human feedback
+24/01
+* Pretrained model doesn't inherently align with users/human intent
+* Pretrained model -> SFT on labeler demonstrated desired output -> RM training on labeler ranked different model outputs -> PPO (RL) optimize policy model
+* Few-shot example, e.g. giving two examples of frog stories, and prompting the model to generate a new one
+
 ## Deep Retrieval: Learning A Retrievable Structure for Large-Scale Recommendations
 23/12
 * Statistic concepts: Likelihood Function, Log Likelihood Function, Maximum Likelihood Estimiation
