@@ -1,3 +1,12 @@
+## PPO: Proximal Policy Optimization Algorithm
+24/01
+* de-facto algorithm used in reinforcement learning and RLHF
+* Previous algorithms are either not efficiency or not stable. PPO achieves both at the same time
+* It enforces no drastic policy model update, through a clipped surrogate objective, and adaptive coefficent for KL penalty
+* Got the rough idea but probably only really understand 30% of the paper details.
+* Surrogate objective, first order algorithm, conjugate gradient algorithm
+
+
 ## InstructGPT: Training language models to follow instructions with human feedback
 24/01
 * Pretrained model doesn't inherently align with users/human intent
