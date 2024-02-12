@@ -1,3 +1,10 @@
+## The wake-sleep algorithm for unsupervised neural networks
+24/02
+* Two problems in supervised learning: 1) requires a teacher to specify the desired output, 2) requires to communicate error information
+* Wake-sleep: a bottom-up recognition model to learn intrisic patterns of the input data, a top-down generative model to reconstruct the input data. Interleave recognition and generative model steps.
+* Wake-sleep, GAN, EM in Deep Retrieval, RLHF finetune, all seem similar?
+* Quite a abstraction heavy paper. Needs at least some concrete examples before understanding what is the vast majority of paper talking about...
+
 ## PPO: Proximal Policy Optimization Algorithm
 24/01
 * de-facto algorithm used in reinforcement learning and RLHF
