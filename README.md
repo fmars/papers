@@ -1,3 +1,9 @@
+## Flash Attention
+24/03
+* Standard attention is memory bandwidth heavy. Intermediate tensors require HBM access quadratically proportion to sequence length
+* softmax computation can be tiled with small extra info stored
+* Backward pass can recompute activations without saving those big tensors to HBM
+* Standard attention requires O(Nd+N^2) HBM accesses while Flash attention requires O(N^2d^2/M) where M is the size of SRAM
 ## The wake-sleep algorithm for unsupervised neural networks
 24/02
 * Two problems in supervised learning: 1) requires a teacher to specify the desired output, 2) requires to communicate error information
