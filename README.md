@@ -1,5 +1,6 @@
 ## Sequence Parallelism
 24/03
+https://arxiv.org/pdf/2205.05198.pdf
 * Megatron-LM (by Nvidia) implemented op sharding: combine vertical and horizental split of two matmul matrix to save one comm.
 * Observation: the activitions passed through layers still takes significant amount of memory and propotionally increase to sequence length. On the other hand, the operations in between is sequence independent
 * Two major techniques: 1) sequence parallel along the sequence length dimention for those activations, 2) tradeoff the recompute cost and memory saving to choose the right activations to checkpoint
