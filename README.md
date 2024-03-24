@@ -1,3 +1,10 @@
+## Efficiently scaling transformer inference 
+24/03
+https://arxiv.org/abs/2211.05102
+* Measurement metrics: 1) latency, 2) throughput, 3) MFU
+* Affecting factors: model size, sequence length, application requirements 
+* Discussed various model partition strategies, and corresponding impact on computation, communication and memory cost.
+
 ## Sequence Parallelism
 24/03
 https://arxiv.org/pdf/2205.05198.pdf
