@@ -1,3 +1,10 @@
+## ZeRO-Offload
+24/03
+https://arxiv.org/abs/2101.06840
+* Limitation of existing heterogeneous DL training: 1) exploit CPU memory but not compute, 2) designed for single GPU and not scale to multiple GPUs
+* Solution: GPU for fwd+bwd, CPU optimizer, inline param update and sync back to GPU
+* Implementation: CPU ADAM optimizer, one step delayed param update (not really sure why this help..)
+
 ## Efficiently scaling transformer inference 
 24/03
 https://arxiv.org/abs/2211.05102
