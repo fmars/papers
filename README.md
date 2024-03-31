@@ -1,3 +1,17 @@
+## MegaScale
+* https://arxiv.org/abs/2402.15627
+* 03/30/2024
+* Techniques used by TikTok to train LLM over 10,000 GPUs
+* Efficient training
+  * Algorithm: parallel transformer block, sliding window attention, LAMB optimizer
+  * Overlap compute and comm: fuse all-gather/reduce-scatter (used for sequence parallel) with MLP computation in FFN
+  * Efficient operator: kernel fusion
+  * Collective comm group initialization: using redis over tcpstore
+* Fault tolerance: RDMA/RNIC checkers, fast checkpointing
+* Observability: heat map to detect slow node, visualize event trace across multiple ranks
+* Experiments: stagger nodes are the norm. irregular GC 
+* Lots of interesting papers in the reference section. Kind of like a good survey paper
+
 ## ZeRO-Offload
 24/03
 https://arxiv.org/abs/2101.06840
