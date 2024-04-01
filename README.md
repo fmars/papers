@@ -1,3 +1,12 @@
+## PyTorch DDP
+* https://arxiv.org/abs/2006.15704
+* 24/03/31
+* API: 1) non-intrusive so that DDP makes it almost like writing local training scripts, 2) interceptive allows various hooks to make program efficient
+* Gradient reduction: 
+  * grad = all_reduce(SUM)/world_size
+  * gradient bucketing: 1) efficient NCCL comm by packing smaller params into a bigger bucket, 2) overlap comm of one bucket of params with backward computation of another bucket of other params
+* Special handle: 1) not all params may participate in bwd. 2) not all ranks may involve the same set of params
+
 ## MegaScale
 * https://arxiv.org/abs/2402.15627
 * 03/30/2024
