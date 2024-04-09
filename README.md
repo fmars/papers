@@ -1,3 +1,8 @@
+## PyTorch FSDP
+* https://arxiv.org/abs/2304.11277
+* 24/04/02
+* PyTorch version of ZeRO
+  
 ## PyTorch DDP
 * https://arxiv.org/abs/2006.15704
 * 24/03/31
