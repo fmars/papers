@@ -1,3 +1,12 @@
+## LAMB: Layer-wise Adaptive Moments optimizer for Big batch
+* https://arxiv.org/pdf/1904.00962.pdf
+* 24/04/02
+* Scalability of SGD is limited by its inherent sequential nature
+* Async training -> degraded ML performance
+* Larger batch size: 1) hand-tuned LR during warmup, 2) scale LR to the order square root of batch size, 3) not work well up to certain batch size
+* Hand-tuned hyperparameters -> adaptive learning rate
+* For each layer's weights, LAMB calculates an individual LR based on the ratio of the weights to the square root of the second moment 
+
 ## PyTorch FSDP
 * https://arxiv.org/abs/2304.11277
 * 24/04/02
