@@ -1,3 +1,16 @@
+## SmoothQuant
+* https://arxiv.org/abs/2211.10438
+* 24/04/05
+* Dynamic quantization -> quantize weights. Static quantization -> quantize both weights and activations
+* PTQ: post training quantization -> quantize trained model for efficient inference
+* QAT: quantization aware training -> simulate quantized inference behavior in training for better ML perf
+* Quantization stores two scalers, scale and zero-point besides tensor
+* Weight is usually easier to quantize than activation, which has more outlier values
+* Tensor level, token level, channel level quantization
+* Activation requires channel level quantization to be effective, but not supported by existing kernel and hardwares
+* [it seems] propose to offline quantize weights to offset bias. Don’t really follow the details
+
+
 ## LAMB: Layer-wise Adaptive Moments optimizer for Big batch
 * https://arxiv.org/pdf/1904.00962.pdf
 * 24/04/02
