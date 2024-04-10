@@ -1,3 +1,12 @@
+## Mixed precision training
+* https://arxiv.org/abs/1710.03740
+* Seems to be the foundational paper in this area
+* Improve throughput of model training bound by arithmetic and memory bandwidth while not loss accuracy
+* Tensor precision: weights, activations, gradients in fp16, master copy of weights (i.e. optimizer state) in fp32
+  * Small valued grads would become zero when multiplied with learning rate
+  * The ratio of weight value to grad value is very large. Grad would become zero in addition operation when right-shift to align
+* Loss scaling: chain loss scale at the end of forward pass. Back-scale grads before optimizer step
+* Arithmetic precision: use fp32 to accumulate intermediate results in fp16 vector dot-product and matrix multiplication. But the input and output types are still fp16
 
 ## LLM.int8()
 * https://arxiv.org/abs/2208.07339
