@@ -1,3 +1,11 @@
+
+## LLM.int8()
+* https://arxiv.org/abs/2208.07339
+* 24/04/09
+* Another solution to tackle outliers in activation like SmoothQuant
+* Problem: extreme outliers of feature dimension in activation start to emerge when model scale exceeds 7B params. Those outliers have a significant impact on model performance. Current quantization solutions don’t handle it well
+* Solution: 1) vector-wise quantization: row-wise quantize on X and column-wise quantize on W for Y=XW, 2) mixed-precision decomposition: outliers are highly systematic, concentrated on a few feature dimensions across the entire transformer. Decompose matmul, still apply fp16 to outliers while use int8 for the remainings
+
 ## SmoothQuant
 * https://arxiv.org/abs/2211.10438
 * 24/04/05
