@@ -1,5 +1,15 @@
+
+## Long-Short Transformer
+* https://arxiv.org/abs/2107.02192
+* 24/04/10
+* Full attention requires quadratic cost to context length
+* Short-term attention: segment-wise sliding window, each token attends to tokens within the window, the half of previous and next windows
+* Long-term attention: dynamic project. Use learnable weights to project K,V from (n, d) to low rank matrix (r, d), before attention
+* Aggregating short and long term attention by concatenating K,Vs 
+
 ## Mixed precision training
 * https://arxiv.org/abs/1710.03740
+* 24/04/09
 * Seems to be the foundational paper in this area
 * Improve throughput of model training bound by arithmetic and memory bandwidth while not loss accuracy
 * Tensor precision: weights, activations, gradients in fp16, master copy of weights (i.e. optimizer state) in fp32
