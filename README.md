@@ -1,3 +1,15 @@
+## PyTorch: an imperative style, high-performance deep learning library
+* https://arxiv.org/abs/1912.01703
+* 24/04/21
+* 4 major trends in deep learning since 1960
+  * array-based programming
+  * automatic differentiation
+  * open-source python ecosystem
+  * hardware accelerator
+* interoperability: PyTorch and NumPy tensors exchange data without any data copy
+* Cache allocator: one-pool-per-stream design provides simple while efficient implementation that allows CPU tensor reallocation running asynchronous before GPU completion
+* Reference counting: tensor memory release happens immediately when count reaches zero
+
 
 ## Long-Short Transformer
 * https://arxiv.org/abs/2107.02192
