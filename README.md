@@ -1,3 +1,19 @@
+## Pipe-SGD: a decentralized pipeline SGD framework for distributed deep net training
+* https://arxiv.org/abs/1811.03619
+* 24/04/21
+* Centralized architecture: parameter server which aggregates gradients and update weights, in either sync or asysnc manner
+* Decentralized architecture: all-reduce across ranks to synchronize weights
+* Use pipeline to overlap computation (opt step and bwd) and communication (sync grads)
+* Use compression/quantization to speed up gradient communication
+
+## A generic communication scheduler for distributed DNN training acceleration
+* https://dl.acm.org/doi/10.1145/3341301.3359642 
+* 24/04/21
+* A generic communication scheduler works for both sync and async training, all of pytorch, tenorflow, etc frameworks
+* Implemented an hook layer between library api and backend engine to achieve comm op rescheduling
+* Writing doesn't seem interesting. Only read the high level ideas
+
+
 ## PyTorch: an imperative style, high-performance deep learning library
 * https://arxiv.org/abs/1912.01703
 * 24/04/21
